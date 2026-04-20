@@ -27,8 +27,6 @@ else
 fi
 unset __mamba_setup
 # <<< mamba initialize <<<
-# Arschkipf
-
 
 export PATH="$PATH:$HOME/.local/bin"
 
