@@ -33,3 +33,9 @@ export PATH="$PATH:$HOME/.local/bin"
 eval "$(starship init zsh)"
 
 export PATH="$PATH:/Applications/WezTerm.app/Contents/MacOS"
+
+bindkey '^[[3~' delete-char
+
+sshopen() {
+    scp "$1:$2" /tmp/$(basename "$2") && open /tmp/$(basename "$2")
+}

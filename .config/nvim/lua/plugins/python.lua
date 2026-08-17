@@ -7,8 +7,8 @@ return {
     "Vigemus/iron.nvim",
     ft = "python",
     keys = {
-      { "<leader>ri", "<cmd>IronRepl<cr>",    desc = "Open iPython REPL", ft = "python" },
-      { "<leader>rR", "<cmd>IronRestart<cr>", desc = "Restart REPL",      ft = "python" },
+      { "<leader>ri", "<cmd>IronRepl<cr>", desc = "Open iPython REPL", ft = "python" },
+      { "<leader>rR", "<cmd>IronRestart<cr>", desc = "Restart REPL", ft = "python" },
     },
     config = function()
       require("iron.core").setup({
@@ -21,13 +21,13 @@ return {
         },
         -- <leader>r* keymaps active in Python buffers
         keymaps = {
-          send_motion    = "<leader>rc",
-          visual_send    = "<leader>rc",
-          send_line      = "<leader>rl",
+          send_motion = "<leader>rc",
+          visual_send = "<leader>rc",
+          send_line = "<leader>rl",
           send_paragraph = "<leader>rp",
-          send_file      = "<leader>rF",
-          exit           = "<leader>rq",
-          clear          = "<leader>rx",
+          send_file = "<leader>rF",
+          exit = "<leader>rq",
+          clear = "<leader>rx",
         },
         highlight = { italic = true },
         ignore_blank_lines = true,
@@ -81,7 +81,13 @@ return {
       { "<leader>me", "<cmd>MoltenEvaluateOperator<cr>", desc = "Evaluate Operator", ft = { "python", "markdown" } },
       { "<leader>ml", "<cmd>MoltenEvaluateLine<cr>", desc = "Evaluate Line", ft = { "python", "markdown" } },
       { "<leader>mr", "<cmd>MoltenReevaluateCell<cr>", desc = "Re-evaluate Cell", ft = { "python", "markdown" } },
-      { "<leader>mv", ":<C-u>MoltenEvaluateVisual<cr>", mode = "v", desc = "Evaluate Visual", ft = { "python", "markdown" } },
+      {
+        "<leader>mv",
+        ":<C-u>MoltenEvaluateVisual<cr>",
+        mode = "v",
+        desc = "Evaluate Visual",
+        ft = { "python", "markdown" },
+      },
       { "<leader>md", "<cmd>MoltenDelete<cr>", desc = "Delete Cell", ft = { "python", "markdown" } },
       { "<leader>mh", "<cmd>MoltenHideOutput<cr>", desc = "Hide Output", ft = { "python", "markdown" } },
       { "<leader>mo", "<cmd>MoltenShowOutput<cr>", desc = "Show Output", ft = { "python", "markdown" } },
