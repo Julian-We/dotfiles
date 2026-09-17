@@ -81,5 +81,5 @@ vim.keymap.set("v", "<leader>/", "gc", { desc = "Toggle Comment", remap = true }
 
 -- Move the original grep functionality to <leader>sg
 vim.keymap.set("n", "<leader>sg", function()
-  require("telescope.builtin").live_grep()
+  Snacks.picker.grep()
 end, { desc = "Grep (Root Dir)" })
